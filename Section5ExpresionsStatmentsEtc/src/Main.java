@@ -7,22 +7,22 @@ public class Main {
         // to see how IntelliJ IDEA suggests fixing it.
         //exerciseOnePositiveNegativeZero(-3);
         exerciseTwoPrintConversion(2.0);
+        MegaBytesConverter(0);
     }
+//Exercise one (1)
+    public static void exerciseOnePositiveNegativeZero ( int number){
 
-    public static void exerciseOnePositiveNegativeZero(int number){
-
-        if(number > 0){
+        if (number > 0) {
             System.out.println("positive");
-        }
-        else if(number < 0){
+        } else if (number < 0) {
             System.out.println("negative");
-        }
-        else{
+        } else {
             System.out.println("zero");
         }
 
-        }
+    }
 
+//Exercise two  (2)
     public static long exerciseTwoToMilesPerHour(double kilometersPerHour){
         if(kilometersPerHour <0){
             return -1;
@@ -44,12 +44,24 @@ public class Main {
         if(milesRounded >= 0) {
             System.out.println(kilometersPerHourRounded + " km/h == " + milesRounded + " mi/h");
         }
-        else{
+        else {
+            System.out.println("Invalid value");
+        }
+
+    }
+
+//Exercise three  (3)
+    public static void MegaBytesConverter(int kiloBytes){
+        if(kiloBytes < 0){
             System.out.println("Invalid value");
         }
 
 
+        double megaAndKiloBytes = (double) kiloBytes/1024;
+        int megaBytes = (int)Math.floor(megaAndKiloBytes);
+        int kilobytesLeft = (int) ((megaAndKiloBytes - megaBytes) * 1024);
 
+        System.out.println(kiloBytes + " KB = " + megaBytes + " MB and " + kilobytesLeft + " KB");
     }
 
 }
